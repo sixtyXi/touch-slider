@@ -1,0 +1,28 @@
+.touch-scroll {
+  overflow: auto;
+  scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+}
+
+.touch-scroll img {
+  pointer-events: none;
+};
+
+@media (max-width: 980px) and (orientation: landscape) {
+  .touch-scroll {
+    scroll-snap-type: y proximity;
+    -ms-scroll-snap-type: y proximity;
+  }
+}
+
+.touch-scroll--no-scrollbar {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.touch-scroll--no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
